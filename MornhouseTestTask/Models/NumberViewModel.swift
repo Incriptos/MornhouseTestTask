@@ -17,12 +17,3 @@ struct NumberViewModel {
   }
   
 }
-
-extension NumberModel: Persistable {
-  func toPersistable() -> RealmSwift.Object? {
-    let numberObject = NumberObject()
-    numberObject.number = self.number
-    numberObject.text = self.text
-    return numberObject
-  }
-}

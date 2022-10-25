@@ -65,12 +65,7 @@ final class SearchScreen: UIViewController {
       searchHistoryList.append(NumberViewModel(object))
     }
   }
-  
-  public func deleteObject(_ object: Object) {
-    let realm = try? Realm()
-    realm?.delete(object)
-  }
-  
+    
   //MARK: - Actions
   @objc private func searchTapped() {
     guard let text = searchTextField.text, !text.isEmptyOrWhitespace() else { return }
